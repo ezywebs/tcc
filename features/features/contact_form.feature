@@ -1,16 +1,20 @@
-Feature: Contact Form page functionality
+Feature: User opens TCC website
+          navigates to Contact page
+          fills out form
+          submits form
 
   @contact_form
   Scenario:
     Given start browser
-    Then navigate to https://taxcreditco.com/
-    Then click contact button on the homepage
+    When navigate to https://taxcreditco.com/
+    Then expect home page is opened
+    When click contact button on the homepage
     Then expect contact page is opened
-    Then set name on contact form to test
-    Then set title on contact form to test
-    Then set company on contact form to test
-    Then set email on contact form to test@test.com
-    Then set phone on contact form to 333-555-4444
-    Then set message on contact form to test
-    Then click submit on contact form
+    When set name on contact form to test
+    When set title on contact form to test
+    When set company on contact form to test
+    When set email on contact form to test@test.com
+    When set phone on contact form to 333-555-4444
+    When set message on contact form to test
+    When click submit on contact form
     Then expect success message is present

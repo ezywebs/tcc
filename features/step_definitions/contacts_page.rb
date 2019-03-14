@@ -2,13 +2,13 @@ Then /^expect contact page is opened$/ do
   expect(@browser.title).to eql('Contact TCC | TCC')
 end
 
-Then /^set (.*) on contact form to (.*)$/ do |element, value|
+When /^set (.*) on contact form to (.*)$/ do |element, value|
   @element = TccWebsite.contact_page.element element
   @element.set value
-  expect (@element.value).eql?(value)
+  expect(@element.value).eql?(value)
 end
 
-Then /^click submit on contact form$/ do
+When /^click submit on contact form$/ do
   @submit = TccWebsite.contact_page.submit
   @submit.click
 end
