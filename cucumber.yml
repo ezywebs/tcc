@@ -1,0 +1,3 @@
+default: --backtrace --profile contact_form --guess
+
+contact_form: --tags @contact_form
